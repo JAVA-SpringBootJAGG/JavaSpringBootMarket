@@ -6,11 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
-
-@Entity
-@Table(name = "productos")
 @Setter
 @Getter
+@Entity
+@Table(name = "productos")
+
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
