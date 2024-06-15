@@ -26,8 +26,7 @@ public class Compra {
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
-    @OneToMany(mappedBy = "compra" +
-            "")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})//cascade = {CascadeType.ALL} todos los procesos contra BD de compra van a incluir sus productos
     private List<ComprasProducto>productos;
 
 
